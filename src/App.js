@@ -146,7 +146,6 @@ var App = Client({
   board: NanaimoBoard,
   game: Nanaimo,
   debug: false,
-  multiplayer: true
 });
 
 export default App;

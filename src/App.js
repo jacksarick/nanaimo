@@ -33,12 +33,8 @@ const Nanaimo = Game({
       }
 
       else {
-        // Final move
-        if (id === last) {
-          if (cells.filter(x => x===null).length === 1) {
-            cells[id] = ctx.currentPlayer;
-          }
-        }
+        // Last block rule
+        if (cells.filter(x => x===null).length !== 1 && id === last) {}
 
         // If cell is valid
         else if (cells[id] === null) {

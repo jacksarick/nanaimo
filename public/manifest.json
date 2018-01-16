@@ -1,0 +1,15 @@
+{
+  "short_name": "Nanaimo",
+  "name": "Nanaimo game",
+  "icons": [
+    {
+      "src": "nanaimo.png",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#333",
+  "background_color": "#ffffff"
+}

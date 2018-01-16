@@ -1,24 +1,41 @@
 body {
   margin: 0;
-  padding: 50px;
-  background: #fff;
-  color: #224;
-  font-family: monospace;
-  font-size: 20px;
+  line-height: 1.5;
+  /*padding: 4em 1em;*/
+  color: #555;
+  font-family: "Helvetica", "Arial", sans-serif;
+  margin-top: 1em;
+  padding-top: 1em;
+  font-size: 1em;
+}
+
+h1, h2, strong {
+  color: #333;
+}
+
+button {
+  margin: .5em;
+  padding: .5em;
+  font-size: 1.25em;
 }
 
 #board {
   border-collapse: collapse;
 }
 
+li {
+  text-align: left;
+  max-width: 25em;
+}
+
 td {
   text-align: center;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.5em;
   color: #555;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
   border: 3px solid #aaa;
 }
 
@@ -29,9 +46,3 @@ td.active {
 /*td.active:hover {
   background: #eee;
 }*/
-
-@media only screen and (max-device-width: 500px) {
-  #debug {
-    display: none;
-  }
-}

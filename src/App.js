@@ -92,7 +92,9 @@ class NanaimoBoard extends React.Component {
   }
 
   endTurn() {
-    this.props.events.endTurn();
+    if (this.props.G.cells.includes(this.props.ctx.currentPlayer)) {
+      this.props.events.endTurn();
+    }
   }
 
   render() {
@@ -113,31 +115,34 @@ class NanaimoBoard extends React.Component {
       tbody.push(<tr key={i}>{cells}</tr>);
     }
 
-    let winner = '';
+    let banner = '';
     if (this.props.ctx.gameover !== undefined) {
-      winner = <div id='winner'>Winner: {this.props.ctx.gameover}</div>;
+      banner = <b>Player {this.props.ctx.gameover} wins!</b>;
+    }
+    else{
+      banner = <b>Player {this.props.ctx.currentPlayer}'s turn</b>;
     }
 
     return (
-      <div>
-          <div>
-            <h2>Welcome to Nanaimo!</h2>
-            <i>Be the one to get the bottom right square!</i>
-            <br/> <br/>
-            <b>Rules:</b>
-            <ul>
-            <li>First move always top left</li>
-            <li>First block you place must touch existing block</li>
-            <li>You may place up to 3 more blocks per turn, all touching blocks placed that turn</li>
-            <li>The bottom right square must be the last square left</li>
-            </ul>
-          </div>
+      <center>
+        <div id="info">
+          <h2>Welcome to Nanaimo!</h2>
+          <i>Be the one to get the bottom right square!</i>
+          <br/> <br/>
+          <b>Rules:</b>
+          <ul>
+          <li>First move always top left</li>
+          <li>First block you place must touch existing block</li>
+          <li>You may place up to 3 more blocks per turn, all touching blocks placed that turn</li>
+          <li>The bottom right square must be the last square left</li>
+          </ul>
+        </div>
+        {banner}
         <table id="board">
-        <tbody>{tbody}</tbody>
+          <tbody>{tbody}</tbody>
         </table>
         <button onClick={() => this.endTurn()}>End Turn</button>
-        {winner}
-      </div>
+      </center>
     );
   }
 }

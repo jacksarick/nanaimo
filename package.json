@@ -1,7 +1,8 @@
 {
   "name": "nanaimo",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "http://jacksarick.github.io/nanaimo",
   "dependencies": {
     "boardgame.io": "^0.16.5",
     "react": "^16.2.0",

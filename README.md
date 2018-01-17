@@ -8,6 +8,6 @@ As the game is based off nim, I beleive it inherits some of the same properties.
 
 This was written in one night, fueled by pure insanity. Everything about it works, and nothing more than that.
 
-##Use
+## Use
 To simply run it on a local machine, run `npm start` to spin up a dev server.
 To publish to github pages, run `npm run deploy` and hope it works.
